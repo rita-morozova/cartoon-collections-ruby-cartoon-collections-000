@@ -1,6 +1,7 @@
 def roll_call_dwarves(dwarves)
-    dwarves.each_with_index do |name, index|
+    dwarves.slice(dwarves.length/2, -1).each_with_index do |name, index|
     puts "#{index + 1} #{name}"
+    
   end
 end
 
@@ -23,3 +24,13 @@ def find_the_cheese(array)
   cheese_types.include?(cheese)
   end
 end
+
+def words_with_b(words)
+  new_array =[]
+  words.each do |words_with_b|
+    if words_with_b.start_with?("b")
+      new_array<<words_with_b
+    end
+  end
+  new_array 
+end  
